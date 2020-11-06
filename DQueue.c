@@ -39,20 +39,23 @@ typedef struct
 	size_t capacity;
 } DQueue;
 
-DQueue* DQueue_New( size_t n );
-void DQueue_Delete( DQueue** this );
-void DQueue_Enqueue_back( DQueue* this, int val );
-void DQueue_Enqueue_front( DQueue* this, int val );
-int DQueue_Dequeue_back( DQueue* this );
-int DQueue_Dequeue_front( DQueue* this );
-int DQueue_Peek( DQueue* this );
-bool DQueue_IsFull( DQueue* this );
-bool DQueue_IsEmpty( DQueue* this );
-void DQueue_MakeEmpty( DQueue* this );
-size_t DQueue_Len( DQueue* this );
-size_t DQueue_Capacity( DQueue* this );
+DQueue* DQueue_New(           size_t capacity );
+void    DQueue_Delete(        DQueue** this );
+void    DQueue_Enqueue_back(  DQueue* this, int val );
+void    DQueue_Enqueue_front( DQueue* this, int val );
+int     DQueue_Dequeue_back(  DQueue* this );
+int     DQueue_Dequeue_front( DQueue* this );
+int     DQueue_Peek_front(    DQueue* this );
+int     DQueue_Peek_back(     DQueue* this );
+bool    DQueue_IsFull(        DQueue* this );
+bool    DQueue_IsEmpty(       DQueue* this );
+void    DQueue_MakeEmpty(     DQueue* this );
+size_t  DQueue_Len(           DQueue* this );
+size_t  DQueue_Capacity(      DQueue* this );
 
-DQueue* DQueue_New( size_t _capacity )
+
+
+DQueue* DQueue_New( size_t capacity )
 {
    return NULL;
 }
