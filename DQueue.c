@@ -32,7 +32,7 @@
 
 typedef struct
 {
-	int* queue;
+	int  *queue;
 	size_t front;
 	size_t back;
 	size_t len;
@@ -93,7 +93,12 @@ int DQueue_Dequeue_front( DQueue* this )
    assert( this->len > 0 );
 }
 
-int DQueue_Peek( DQueue* this )
+int DQueue_Peek_front( DQueue* this )
+{
+   assert( this->len > 0 );
+}
+
+int DQueue_Peek_back( DQueue* this )
 {
    assert( this->len > 0 );
 }
